@@ -89,15 +89,14 @@ console.log(getNamesSortedByFriendsCount(users));
 
 // Задание 10
 
-const getSortedUniqueSkills = (users) => {
-  return users
-    .reduce(function (skills, user) {
+const getSortedUniqueSkills = (users) =>
+  users
+    .reduce((skills, user) => {
       skills.push(...user.skills);
       return skills;
     }, [])
     .filter((skill, i, arr) => arr.indexOf(skill) == i)
     .sort();
-};
 
 console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
